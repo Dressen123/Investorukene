@@ -42,7 +42,7 @@
 .kropp{
     width: 100%;
     height: 42em;
-    background-color: #87d68d;
+    background-image: linear-gradient(to bottom right, #87d68d, #636a6f);
 }
 
 .brukernavn_boks,

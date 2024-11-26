@@ -1,3 +1,7 @@
+<script>
+    import Footer from "../components/footer.svelte";
+</script>
+
 <div class="hjemside_kropp">
     <div class="hjemmsideboks1"></div>
     <div class="hjemmsideboks2">
@@ -11,12 +15,14 @@
     </div>
     <div class="hjemmsideboks3"></div>
 </div>
+<Footer />
 <slot/>
 
 <style>
 #midtpåsideskrift{
     color: white;
     font-size: 2.3em;
+    text-shadow: 2px 2px #000000;
 }
 
 
@@ -36,10 +42,11 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 19px;
+    font-size: 24px;
     margin: 4px 2px;
     cursor: pointer;
-    border-radius: 15px;
+    border-radius: 19px;
+    text-shadow: 2px 2px #000000;
 }
 
 .hjemmsideboks1{

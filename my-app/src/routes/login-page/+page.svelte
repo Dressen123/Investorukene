@@ -1,3 +1,24 @@
+<script>
+    import Footer from "../../components/footer.svelte";
+    const loginDatabase = {
+            kakemonster: "cookies",
+            henrik: "appelsiner",
+            smurfeis: "dyreparkis"
+        };
+
+        let brukernavn = '';
+        let passord = '';
+        let status = '';
+
+        function logg_inn() {
+            if (loginDatabase[brukernavn] === passord) {
+                status = "LOGGET INN";
+            } else {
+                status = "IKKE LOGGET INN";
+            }
+        }
+</script>
+
 <div class="kropp">
     <div class="brukernavn_boks">
         <label for="brukernavn" id="labelskrift">Brukernavn</label>
@@ -15,27 +36,7 @@
         <p>{status}</p>
     </div>
 </div>  
-
-<script>
-
-const loginDatabase = {
-        kakemonster: "cookies",
-        henrik: "appelsiner",
-        smurfeis: "dyreparkis"
-    };
-
-    let brukernavn = '';
-    let passord = '';
-    let status = '';
-
-    function logg_inn() {
-        if (loginDatabase[brukernavn] === passord) {
-            status = "LOGGET INN";
-        } else {
-            status = "IKKE LOGGET INN";
-        }
-    }
-</script>
+<Footer />
 
 <style>
 .kropp{

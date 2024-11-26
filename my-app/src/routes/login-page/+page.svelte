@@ -1,18 +1,41 @@
 <div class="kropp">
     <div class="brukernavn_boks">
         <label for="brukernavn" id="labelskrift">Brukernavn</label>
-        <input type="text" id="brukernavn" placeholder="Skriv inn brukernavn">
+        <input type="text" id="brukernavn" placeholder="Skriv inn brukernavn" bind:value={brukernavn}>
     </div>
     
     <div class="passord_boks">
         <label for="passord" id="labelskrift">Passord</label>
-        <input type="password" id="passord" placeholder="Skriv inn passord">
+        <input type="password" id="passord" placeholder="Skriv inn passord" bind:value={passord}>
     </div>
     
     <div class="logginn_knapp">
-        <button type="submit" class="button">Logg inn</button>
+        <button class="button" on:click={logg_inn()}>Logg inn</button>
+        <br>
+        <p>{status}</p>
     </div>
 </div>  
+
+<script>
+
+const loginDatabase = {
+        kakemonster: "cookies",
+        henrik: "appelsiner",
+        smurfeis: "dyreparkis"
+    };
+
+    let brukernavn = '';
+    let passord = '';
+    let status = '';
+
+    function logg_inn() {
+        if (loginDatabase[brukernavn] === passord) {
+            status = "LOGGET INN";
+        } else {
+            status = "IKKE LOGGET INN";
+        }
+    }
+</script>
 
 <style>
 .kropp{
@@ -33,7 +56,7 @@
 }
 
 #labelskrift {
-    color: #bcebcb;
+    color: white;
     font-size: 1.5em; /* Adjust font size if needed */
     text-align: center; /* Optional: Center the label text */
 }
@@ -53,7 +76,7 @@
     align-items: center;
 }
 .button {
-    background-color: #04AA6D;
+    background-color: #6e6a6f;
     border: none;
     color: white;
     padding: 15px 32px;

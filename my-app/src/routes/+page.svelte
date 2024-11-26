@@ -1,7 +1,7 @@
 <div class="hjemside_kropp">
     <div class="hjemmsideboks1"></div>
     <div class="hjemmsideboks2">
-        <p id="headerskrift">Velkommen til Eventra
+        <p id="midtpåsideskrift">Velkommen til Eventra
             Oppdag spennende arrangementer og aktiviteter i nærheten av deg. 
             Planlegg, del og delta – alt samlet på ett sted. 
             Gjør hver dag til en opplevelse med Eventra!</p>
@@ -14,9 +14,9 @@
 <slot/>
 
 <style>
-#headerskrift{
-    color: #bcebcb;
-    font-size: 2em;
+#midtpåsideskrift{
+    color: white;
+    font-size: 2.3em;
 }
 
 
@@ -29,25 +29,25 @@
 }
 
 .button {
-    background-color: #04AA6D;
+    background-color: #6e6a6f;
     border: none;
     color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 19px;
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 15px;
 }
 
 .hjemmsideboks1{
-    width: 30%;
+    width: 25%;
     height: 100%;
 }
 .hjemmsideboks2{
-    width: 40%;
+    width: 50%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -55,7 +55,7 @@
     align-items: center;
 }
 .hjemmsideboks3{
-    width: 30%;
+    width: 25%;
     height: 100%;
 }
 </style>
